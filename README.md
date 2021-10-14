@@ -21,16 +21,19 @@ Crearemos una nueva carpeta dentro de nuestro directorio `home`.
 entraremos al directorio
 
     cd anotacion
+
+:warning: En los próximos comandos, recuerde reemplazar la N por el número de su grupo.
+
+
+Copiaremos los resultados de nuestros ensambles en el directorio
     
-copiaremos los resultados de nuestros ensambles en el directorio
+    cp /mnt/md0/data4BT/btN/canu_btN/btN.contigs.fasta canu.fasta
+    cp /mnt/md0/data4BT/btN/spades_btN/scaffolds.fasta spades.fasta
+
+
+Ejecutaremos prodigal para predecir los genes:
+
+    prodigal -a canu.faa -d canu.fna -f gff -o canu.gff -i canu.fasta
+    prodigal -a spades.faa -d spades.fna -f gff -o spades.gff -i spades.fasta
     
-:warning: En los próximos comandos, recuerde reemplazar 
-la N por el número de su grupo.
-
-
-  cp /mnt/md0/datos4BT/btN/canu_btN/btN.contigs.fasta .
-  
-  cp /mnt/md0/datos4BT/btN/spades_btN
-
-
-
+    
