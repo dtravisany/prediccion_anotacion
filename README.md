@@ -46,6 +46,7 @@ Ejecutaremos `tRNAscan-SE`
     tRNAscan-SE -B -o spades.trna spades.fasta
 
 Ejecutaremos `barrnap` para identificar los rRNAs:
+  
     barrnap canu.fasta -o canu.rrna
     barrnap spades.fasta -o spades.rrna
 
