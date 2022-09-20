@@ -31,8 +31,8 @@ entraremos al directorio
 
 Copiaremos los resultados de nuestros ensambles en el directorio
     
-    cp /mnt/md0/data4BT/btN/canu_btN/btN.contigs.fasta canu.fasta
-    cp /mnt/md0/data4BT/btN/spades_btN/scaffolds.fasta spades.fasta
+    cp /mnt/biostore/curso/userN/canu_bt40.contigs.fasta canu.fasta
+    cp /mnt/biostore/curso/userN/scaffolds.fasta spades.fasta
 
 
 Ejecutaremos `prodigal` para predecir los CDS:
