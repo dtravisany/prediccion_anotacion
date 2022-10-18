@@ -55,6 +55,26 @@ Ejecutamos `blastp` para anotar nuestros genes:
     blastp -num_threads 10 -db /mnt/md0/DB/uniprot_sprot.fasta -num_descriptions 5 -num_alignments 2 -evalue 1e-5 -query canu.faa -out canu.bp
     blastp -num_threads 10 -db /mnt/md0/DB/uniprot_sprot.fasta -num_descriptions 5 -num_alignments 2 -evalue 1e-5 -query spades.faa -out spades.bp
     
-Script de anotación:
+Script para sacar las estadísticas de los ensambles:
+
+    get_stats.pl [-h] -f archivo.fasta -e GenomeSize_in_bp
+    
+    Calcula las estadísticas de un ensamble de genomas a partir de un archivo fasta
+	  Parámetros:
+    
+    h       Este Mensaje de Ayuda
+	  f	fasta	Archivo formato fasta
+	  e	int	  Tamaño estimado del genoma, por ejemplo: 3000000
+	
+
+Script para sacar los resultados de blast:
+
+    blastparser.pl [-h] -b blastfile -p percent_identity  
+    
+    Parámetros:
+    b	file	Archivo de salida de blast
+    p	int   porcentaje de identidad [por defecto 35]
+
+  
 
     
