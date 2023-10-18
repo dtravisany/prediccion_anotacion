@@ -31,8 +31,8 @@ entraremos al directorio
 
 Copiaremos los resultados de nuestros ensambles en el directorio
     
-    cp /mnt/biostore/curso/userN/canu_bt40.contigs.fasta canu.fasta
-    cp /mnt/biostore/curso/userN/scaffolds.fasta spades.fasta
+    cp readsgN/canu_gN.contigs.fasta canu.fasta
+    cp readsgN/scaffolds.fasta spades.fasta
 
 
 Ejecutaremos `prodigal` para predecir los CDS:
@@ -52,20 +52,9 @@ Ejecutaremos `barrnap` para identificar los rRNAs:
 
 Ejecutamos `blastp` para anotar nuestros genes:
 
-    blastp -num_threads 10 -db /mnt/md0/DB/uniprot_sprot.fasta -num_descriptions 5 -num_alignments 2 -evalue 1e-5 -query canu.faa -out canu.bp
-    blastp -num_threads 10 -db /mnt/md0/DB/uniprot_sprot.fasta -num_descriptions 5 -num_alignments 2 -evalue 1e-5 -query spades.faa -out spades.bp
+    blastp -num_threads 10 -db uniprot_sprot.fasta -num_descriptions 5 -num_alignments 2 -evalue 1e-5 -query canu.faa -out canu.bp
+    blastp -num_threads 10 -db uniprot_sprot.fasta -num_descriptions 5 -num_alignments 2 -evalue 1e-5 -query spades.faa -out spades.bp
     
-Script para sacar las estadísticas de los ensambles:
-
-    get_stats.pl [-h] -f archivo.fasta -e GenomeSize_in_bp
-    
-    Calcula las estadísticas de un ensamble de genomas a partir de un archivo fasta
-	  Parámetros:
-    
-    h       Este Mensaje de Ayuda
-	  f	fasta	Archivo formato fasta
-	  e	int	  Tamaño estimado del genoma, por ejemplo: 3000000
-	
 
 Script para sacar los resultados de blast:
 
