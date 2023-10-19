@@ -32,7 +32,7 @@ entraremos al directorio
 Copiaremos los resultados de nuestros ensambles en el directorio
     
     cp readsgN/canu_gN.contigs.fasta canu.fasta
-    cp ../readsg100/spades_grupo100/scaffolds.fasta spades.fasta
+    cp ../readsgN/spades_grupoN/scaffolds.fasta spades.fasta
 
 Ejecutaremos `prodigal` para predecir los CDS:
 
