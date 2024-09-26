@@ -51,8 +51,8 @@ Ejecutaremos `barrnap` para identificar los rRNAs:
 
 Ejecutamos `blastp` para anotar nuestros genes:
 
-    blastp -num_threads 10 -db /opt/PythonCurso/uniprot/uniprot_sprot.fasta -num_descriptions 5 -num_alignments 2 -evalue 1e-5 -query canu.faa -out canu.bp
-    blastp -num_threads 10 -db /opt/PythonCurso/uniprot/uniprot_sprot.fasta -num_descriptions 5 -num_alignments 2 -evalue 1e-5 -query spades.faa -out spades.bp
+    blastp -num_threads 10 -db /opt/DB/sprot20240724 -num_descriptions 5 -num_alignments 2 -evalue 1e-5 -query canu.faa -out canu.bp
+    blastp -num_threads 10 -db /opt/DB/sprot20240724 -num_descriptions 5 -num_alignments 2 -evalue 1e-5 -query spades.faa -out spades.bp
     
 
 Script para sacar los resultados de blast:
