@@ -14,7 +14,7 @@ por lo que utilizaremos los resultados de sus ensambles.
 6. Base de datos [SwissProt](https://www.expasy.org/resources/uniprotkb-swiss-prot) contenida en [UniProtKB](https://www.uniprot.org/) formateada para BLAST+.
 7. Scripts custom para asignar función a los péptidos.
 8. [eggnog-mapper](https://github.com/eggnogdb/eggnog-mapper) para anotación rápida del genoma.
-9. [BUSCO](https://busco.ezlab.org/busco_userguide.html) Para revisar la completitud de nuestro genoma.
+9. [BUSCO](https://busco.ezlab.org/busco_userguide.html) Para revisar la completitud de nuestro genoma.  
 10.[GenoVi](https://github.com/robotoD/GenoVi) Para visualizar nuestros resultados.
   
    
