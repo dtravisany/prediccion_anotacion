@@ -77,8 +77,9 @@ Script para sacar los resultados de blast:
 ### 8. [eggnog-mapper](https://github.com/eggnogdb/eggnog-mapper) para anotación rápida de los péptidos del genoma.
 
 Ejecutamos:
-      emapper.py --cpu 10 --itype proteins --outfmt_short -i canu.faa -o canu_emapper
-      emapper.py --cpu 10 --itype proteins --outfmt_short -i spades.faa -o spades_emapper
+
+    emapper.py --cpu 10 --itype proteins --outfmt_short -i canu.faa -o canu_emapper
+    emapper.py --cpu 10 --itype proteins --outfmt_short -i spades.faa -o spades_emapper
 
     
 ### 9. [BUSCO](https://busco.ezlab.org/busco_userguide.html) Para revisar la completitud de nuestro genoma.
