@@ -75,7 +75,11 @@ Script para sacar los resultados de blast:
 
 
 ### 8. [eggnog-mapper](https://github.com/eggnogdb/eggnog-mapper) para anotación rápida de los péptidos del genoma.
-   
+
+Ejecutamos:
+      emapper.py --cpu 10 --itype proteins --outfmt_short -i canu.faa -o canu_emapper
+      emapper.py --cpu 10 --itype proteins --outfmt_short -i spades.faa -o spades_emapper
+
     
 ### 9. [BUSCO](https://busco.ezlab.org/busco_userguide.html) Para revisar la completitud de nuestro genoma.
 
@@ -84,12 +88,23 @@ Activamos el ambiente de conda donde está instalado busco
     conda activate busco
 
 debería ver algo así: 
-```bash
-    (busco) mim-N@devastator
+```console
+    (busco) mim-N@devastator:~/anotacion$
 ```
- 
+Ejecutamos `busco` con los siguientes parámetros.
+
     busco --in canu.faa -o busco_canu --auto-lineage-prok -c 24 --mode proteins --download_path /opt/DB/busco/
     busco --in spades.faa -o busco_spades --auto-lineage-prok -c 24 --mode proteins --download_path /opt/DB/busco/
+
+Desactivamos el ambiente de conda donde está instalado busco
+
+    conda deactivate
+
+debería ver algo así: 
+```console
+    (base) mim-N@devastator:~/anotacion$
+```
+
 
 ### 10.[pyCirclize](https://github.com/moshi4/pyCirclize) Para visualizar nuestros resultados.
 
