@@ -67,12 +67,12 @@ Ejecutamos `blastp` para anotar nuestras proteínas:
 
 Script para sacar los resultados de blast:
 
-    blastparser.pl [-h] -b blastfile -p percent_identity  
-    
+    blastparser.pl [-h] -b blastfile -p percent_identity > archivo_salida
+     
     Parámetros:
     b	file	Archivo de salida de blast
     p	int   porcentaje de identidad [por defecto 35]
-
+    arcivo_salida file nombre del archivo salida, por ejemplo: canu.parsed.bp, spades.parsed.bp
 
 ### 8. [eggnog-mapper](https://github.com/eggnogdb/eggnog-mapper) para anotación rápida de los péptidos del genoma.
 
@@ -108,5 +108,12 @@ debería ver algo así:
 
 
 ### 10.[GenoVi](https://github.com/robotoD/GenoVi) Para visualizar nuestros resultados.
+
+Creamos un archivo gbk con el siguiente comando:
+
+    python generate_gbk.py --fasta canu.fasta --gff canu.gff --faa canu.faa --fna canu.fna --barrnap canu.barrnap.gff --trna canu.trna --swissprot canu.parsed.bp --emapper canu_emapper.emapper.annotations --output canu.gbk
+
+Repetir para spades.
+
 
     
