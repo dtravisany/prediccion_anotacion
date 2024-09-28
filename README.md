@@ -15,7 +15,7 @@ por lo que utilizaremos los resultados de sus ensambles.
 7. Scripts custom para asignar función a los péptidos.
 8. [eggnog-mapper](https://github.com/eggnogdb/eggnog-mapper) para anotación rápida del genoma.
 9. [BUSCO](https://busco.ezlab.org/busco_userguide.html) Para revisar la completitud de nuestro genoma.
-10.[pyCirclize](https://github.com/moshi4/pyCirclize) Para visualizar nuestros resultados.
+10.[GenoVi](https://github.com/robotoD/GenoVi) Para visualizar nuestros resultados.
   
    
 ### 1. Mover los Ensambles
@@ -106,6 +106,6 @@ debería ver algo así:
 ```
 
 
-### 10.[pyCirclize](https://github.com/moshi4/pyCirclize) Para visualizar nuestros resultados.
+### 10.[GenoVi](https://github.com/robotoD/GenoVi) Para visualizar nuestros resultados.
 
     
