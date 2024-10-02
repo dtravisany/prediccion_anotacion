@@ -111,7 +111,7 @@ debería ver algo así:
 
 Creamos un archivo gbk con el siguiente comando:
 
-    python generate_gbk.py --fasta canu.fasta --gff canu.gff --faa canu.faa --fna canu.fna --barrnap canu.barrnap.gff --trna canu.trna --swissprot canu.parsed.bp --emapper canu_emapper.emapper.annotations --output canu.gbk
+    generate_gbk.py --fasta canu.fasta --gff canu.gff --faa canu.faa --fna canu.fna --barrnap canu.barrnap.gff --trna canu.trna --swissprot canu.parsed.bp --emapper canu_emapper.emapper.annotations --output canu.gbk
 
 Repetir para spades.
 
