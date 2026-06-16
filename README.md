@@ -100,12 +100,17 @@ debería ver algo así:
 ```console
     (busco) mim-N@devastator:~/anotacion$
 ```
-Ejecutamos `busco` con los siguientes parámetros.
+Ejecutamos `busco` sobre el **proteoma predicho** (`.faa`) con los siguientes parámetros.
 
-    busco --in canu.faa -o busco_canu --auto-lineage-prok -c 24 --mode proteins --download_path /opt/DB/busco/
-    busco --in spades.faa -o busco_spades --auto-lineage-prok -c 24 --mode proteins --download_path /opt/DB/busco/
+    busco --in canu.faa -o busco_canu -l bacteria_odb10 -c 24 --mode proteins --download_path /opt/DB/busco/
+    busco --in spades.faa -o busco_spades -l bacteria_odb10 -c 24 --mode proteins --download_path /opt/DB/busco/
 
-:information_source: Aquí corremos BUSCO en `--mode proteins`, por lo que mide la completitud del **proteoma predicho** (es decir, predicción + ensamble combinados). Si además quieres evaluar la completitud del **ensamble** en sí, puedes correr BUSCO en `--mode genome` sobre `canu.fasta`/`spades.fasta`. Nota: `--auto-lineage-prok` está pensado principalmente para `genome` mode; en `proteins` mode puedes fijar el linaje directamente, por ejemplo con `-l bacteria_odb10`.
+### 8.1 `BUSCO` en modo genome
+
+Además del proteoma, evaluamos la completitud del **ensamble** en sí corriendo BUSCO en `--mode genome` sobre los FASTA del ensamble (`canu.fasta`/`spades.fasta`). En este modo usamos `--auto-lineage-prok` para que BUSCO seleccione automáticamente el linaje procarionte adecuado.
+
+    busco --in canu.fasta -o busco_genome_canu --auto-lineage-prok -c 24 --mode genome --download_path /opt/DB/busco/
+    busco --in spades.fasta -o busco_genome_spades --auto-lineage-prok -c 24 --mode genome --download_path /opt/DB/busco/
 
 Desactivamos el ambiente de conda donde está instalado busco
 
