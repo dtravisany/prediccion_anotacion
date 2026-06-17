@@ -127,7 +127,7 @@ Desactivamos el ambiente de conda donde está instalado busco
 
 debería ver algo así: 
 ```console
-    (base)bioinfoN@devastator:~/anotacion$
+    bioinfoN@devastator:~/anotacion$
 ```
 
 
