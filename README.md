@@ -28,7 +28,7 @@ entraremos al directorio
 
     cd anotacion
 
-:warning: En los próximos comandos, recuerde reemplazar la N por el número de su grupo.
+:warning: En los próximos comandos, recuerde reemplazar el 9 por el número de su grupo y DT por sus iniciales.
 
 
 Copiaremos los resultados de nuestros ensambles en el directorio que acabamos de crear y les cambiaremos el nombre
@@ -62,9 +62,15 @@ Ejecutaremos `barrnap` para identificar los rRNAs.
 ### 5. `blastp` para anotar nuestros péptidos:
 
 Ejecutamos `blastp` para anotar nuestras proteínas:
+:warning: `blastp` se va a demorar harto, por lo que es recomendable iniciar un screen, reemplace _9_DT por el número de su grupo y sus iniciales
 
-    blastp -num_threads 10 -db /opt/DB/swissprot16062026 -num_descriptions 5 -num_alignments 2 -evalue 1e-5 -query canu.faa -out canu.bp
-    blastp -num_threads 10 -db /opt/DB/swissprot16062026 -num_descriptions 5 -num_alignments 2 -evalue 1e-5 -query spades.faa -out spades.bp
+    screen -S blast_9_DT_canu
+
+    blastp -num_threads 4 -db /opt/DB/swissprot16062026 -num_descriptions 5 -num_alignments 2 -evalue 1e-5 -query canu.faa -out canu.bp
+
+    screen -S blast_9_DT_spades
+    
+    blastp -num_threads 4 -db /opt/DB/swissprot16062026 -num_descriptions 5 -num_alignments 2 -evalue 1e-5 -query spades.faa -out spades.bp
     
 ### 6. Scripts custom para asignar función a los péptidos.
 
