@@ -34,7 +34,7 @@ entraremos al directorio
 Copiaremos los resultados de nuestros ensambles en el directorio que acabamos de crear y les cambiaremos el nombre
     
     cp ~/reads/canu_grupo9_DT/grupo9_DT.contigs.fasta canu.fasta
-    cp ~/reads/spades_grupo9_DT/spades_grupo9_DT/scaffolds.fasta spades.fasta
+    cp ~/reads/spades_grupo9_DT/scaffolds.fasta spades.fasta
 
 ### 2. `Prodigal` para la detección de CDS
 
