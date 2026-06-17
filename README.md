@@ -33,8 +33,8 @@ entraremos al directorio
 
 Copiaremos los resultados de nuestros ensambles en el directorio que acabamos de crear y les cambiaremos el nombre
     
-    cp /opt/reads/gNreads/canu_gN.contigs.fasta canu.fasta
-    cp /opt/reads/gNreads/spades_grupoN/scaffolds.fasta spades.fasta
+    cp ~/reads/canu_grupo9_DT/grupo9_DT.contigs.fasta canu.fasta
+    cp ~/reads/spades_grupo9_DT/spades_grupo9_DT/scaffolds.fasta spades.fasta
 
 ### 2. `Prodigal` para la detección de CDS
 
@@ -63,8 +63,8 @@ Ejecutaremos `barrnap` para identificar los rRNAs.
 
 Ejecutamos `blastp` para anotar nuestras proteínas:
 
-    blastp -num_threads 10 -db /opt/DB/sprot20240724 -num_descriptions 5 -num_alignments 2 -evalue 1e-5 -query canu.faa -out canu.bp
-    blastp -num_threads 10 -db /opt/DB/sprot20240724 -num_descriptions 5 -num_alignments 2 -evalue 1e-5 -query spades.faa -out spades.bp
+    blastp -num_threads 10 -db /opt/DB/swissprot16062026 -num_descriptions 5 -num_alignments 2 -evalue 1e-5 -query canu.faa -out canu.bp
+    blastp -num_threads 10 -db /opt/DB/swissprot16062026 -num_descriptions 5 -num_alignments 2 -evalue 1e-5 -query spades.faa -out spades.bp
     
 ### 6. Scripts custom para asignar función a los péptidos.
 
@@ -86,9 +86,12 @@ Por ejemplo:
 
 Ejecutamos:
 
-    emapper.py --cpu 10 --itype proteins --outfmt_short -i canu.faa -o canu_emapper
-    emapper.py --cpu 10 --itype proteins --outfmt_short -i spades.faa -o spades_emapper
+    conda activate emapper
 
+    emapper.py --cpu 4 --itype proteins --outfmt_short -i canu.faa -o canu_emapper
+    emapper.py --cpu 4 --itype proteins --outfmt_short -i spades.faa -o spades_emapper
+
+    conda deactivate
     
 ### 8. [BUSCO](https://busco.ezlab.org/busco_userguide.html) Para revisar la completitud de nuestro genoma.
 
@@ -98,7 +101,7 @@ Activamos el ambiente de conda donde está instalado busco
 
 debería ver algo así: 
 ```console
-    (busco) mim-N@devastator:~/anotacion$
+    (busco)bioinfoN@devastator:~/anotacion$
 ```
 Ejecutamos `busco` sobre el **proteoma predicho** (`.faa`) con los siguientes parámetros.
 
@@ -118,7 +121,7 @@ Desactivamos el ambiente de conda donde está instalado busco
 
 debería ver algo así: 
 ```console
-    (base) mim-N@devastator:~/anotacion$
+    (base)bioinfoN@devastator:~/anotacion$
 ```
 
 
