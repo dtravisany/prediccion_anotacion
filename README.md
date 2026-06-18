@@ -138,6 +138,10 @@ Primero creamos un archivo `gbk` que integra todas las anotaciones anteriores:
     generate_gbk.py --fasta canu.fasta --gff canu.gff --faa canu.faa --fna canu.fna --barrnap canu.barrnap.gff --trna canu.trna --swissprot canu.parsed.bp --emapper canu_emapper.emapper.annotations --output canu.gbk
 
 Repetir para spades.
+Cargamos el ambiente de `genovi`
+
+    conda activate genovi
+
 
 Finalmente generamos la figura circular del genoma con GenoVi. Como trabajamos con ensambles borrador (múltiples contigs/scaffolds), usamos `-s draft`:
 
